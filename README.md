@@ -23,19 +23,27 @@
 ### Задание 1
 
 ![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C1.png)
-![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C2.png)
-![Скриншот 1 к заданию 3](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C3.png)
-![Скриншот 1 к заданию 4](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C4.png)
-![Скриншот 1 к заданию 5](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C5.png)
-![Скриншот 1 к заданию 6](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C6.png)
-![Скриншот 1 к заданию 7](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C7.png)
-![Скриншот 1 к заданию 8](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C8.png)
+![Скриншот 2 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C2.png)
+![Скриншот 3 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C3.png)
+![Скриншот 4 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C4.png)
+![Скриншот 5 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C5.png)
+![Скриншот 6 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C6.png)
+![Скриншот 7 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C7.png)
+![Скриншот 8 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C8.png)
 
 ### Задание 2
 
-
+![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%202%2C1.png)
+![Скриншот 2 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%202%2C2.png)
+![Скриншот 3 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%202%2C3.png)
+![Скриншот 4 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%202%2C4.png)
+![Скриншот 5 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%202%2C5.png)
 
 ### Задание 3
 
-[Ответ к заданию 3](https://github.com/NewParadigma96/netology-git-8-01.md/network)
+![Скриншот 1 к заданию 3](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%203%2C1.png)
+![Скриншот 2 к заданию 3](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%203%2C2.png)
+![Скриншот 3 к заданию 3](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%203%2C3.png)
+![Скриншот 4 к заданию 3](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%203%2C4.png)
+![Скриншот 5 к заданию 3](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%203%2C5.png)
 
