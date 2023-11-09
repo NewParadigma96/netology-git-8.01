@@ -22,11 +22,18 @@
 
 ### Задание 1
 
-[Ответ к заданию 1](https://github.com/NewParadigma96/netology-git-8-01.md/commit/971f292a02e539d86bb5d625465ba8a5d26b5c08)
+![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C1.png)
+![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C2.png)
+![Скриншот 1 к заданию 3](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C3.png)
+![Скриншот 1 к заданию 4](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C4.png)
+![Скриншот 1 к заданию 5](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C5.png)
+![Скриншот 1 к заданию 6](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C6.png)
+![Скриншот 1 к заданию 7](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C7.png)
+![Скриншот 1 к заданию 8](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C8.png)
 
 ### Задание 2
 
-[Ответ к заданию 2](https://github.com/NewParadigma96/netology-git-8-01.md/commit/44dc6c526e8fae09b2e54d8474fd1da7f2b92e20)
+
 
 ### Задание 3
 
