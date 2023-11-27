@@ -22,11 +22,11 @@
 
 ### Задание 1
 
-![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%201%2C1.png)
+![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8%20%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D0%B0.png)
 
 ### Задание 2
 
-![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%202%2C1.png)
-![Скриншот 2 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Image%202%2C2.)
+![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/%D0%9A%D0%BE%D0%B4%20pipeline.png)
+![Скриншот 2 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Bild%20Pipelines.png)
 
 
