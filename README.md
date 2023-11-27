@@ -26,7 +26,24 @@
 
 ### Задание 2
 
-![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/%D0%9A%D0%BE%D0%B4%20pipeline.png)
-![Скриншот 2 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Bild%20Pipelines.png)
+```
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  image: golang:1.17
+  script:
+   - go test .
+
+build:
+  stage: build
+  image: docker:latest
+  script:
+   - docker build .
+```
+
+![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Bild%20Pipelines.png)
 
 
