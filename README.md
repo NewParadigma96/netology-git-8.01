@@ -22,7 +22,7 @@
 
 ### Задание 1
 
-1. [Скриншот авторизации в админке](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Admin_dashboard.png)
+![Скриншот авторизации в админке](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Admin_dashboard.png)
 
 Установка и настройка Zabbix для Debian 11 (Bullseye)
 
