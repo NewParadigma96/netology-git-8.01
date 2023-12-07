@@ -22,7 +22,7 @@
 
 ### Задание 1
 
-1. [Скриншот авторизации в админке]()
+1. [Скриншот авторизации в админке](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Admin_dashboard.png)
 
 Установка и настройка Zabbix для Debian 11 (Bullseye)
 
@@ -71,9 +71,9 @@ sudo systemctl enable zabbix-server apache2 # zabbix-agent
 
 ### Задание 2
 
-![Скриншот раздела Configuration > Hosts]()
-![Скриншот лога zabbix agent]()
-![Скриншот раздела Monitoring]()
+![Скриншот раздела Configuration > Hosts](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Configuratoin_hosts.png)
+![Скриншот лога zabbix agent](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/zabbix_agent_log.png)
+![Скриншот раздела Monitoring](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Latest_data.png)
 
 Установка Zabbix agent
 
