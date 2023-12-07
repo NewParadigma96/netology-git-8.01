@@ -28,46 +28,46 @@
 
 Установка PostgreSQL
 
-'apt install postgresq'
+`apt install postgresq`
 
 Установка Zabbix репозитория
 
-'''
+```
 wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
 dpkg -i zabbix-release_6.0-4+debian11_all.deb
 apt update
-'''
+```
 
 Установка Zabbix server, frontend, agent
 
-'apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent'
+`apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent`
 
 Создание пользователя БД
 
-'sudo -u postgres createuser --pwprompt zabbix'
+`sudo -u postgres createuser --pwprompt zabbix`
 
 Создание БД
 
-'sudo -u postgres createdb -O zabbix zabbix'
+`sudo -u postgres createdb -O zabbix zabbix`
 
 Импортирование схемы и данных на сервер Zabbix
 
-'zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix'
+`zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix`
 
 Редактирование файла конфигурации БД сервера Zabbix
 
-'sudo nano /etc/zabbix/zabbix_server.conf'
+`sudo nano /etc/zabbix/zabbix_server.conf`
 
 Настройка PHP для Zabbix веб-интерфейса
 
-'sudo nano /etc/httpd/conf.d/zabbix.conf'
+`sudo nano /etc/httpd/conf.d/zabbix.conf`
 
 Запуск Zabbix server, Zabbix agent и веб-сервер
 
-'''
+```
 sudo systemctl restart zabbix-server apache2 # zabbix-agent 
 sudo systemctl enable zabbix-server apache2 # zabbix-agent
-'''
+```
 
 ### Задание 2
 
@@ -77,19 +77,19 @@ sudo systemctl enable zabbix-server apache2 # zabbix-agent
 
 Установка Zabbix agent
 
-'apt install zabbix-agent'
+`apt install zabbix-agent`
 
 Настройка файла конфигурации zabbix agent
 
-'sudo nano /etc/zabbix/zabbix_agentd.conf'
+`sudo nano /etc/zabbix/zabbix_agentd.conf`
 
 Запуск Zabbix agent
 
-'''
+```
 sudo systemctl restart zabbix-agent
 sudo systemctl enable zabbix-agent
-'''
+```
 
 Просмотров лога zabbix agent
 
-'cat /var/zabbix/zabbix_agentd.log'
+`cat /var/zabbix/zabbix_agentd.log`
