@@ -1,4 +1,4 @@
-# Домашнее задание к занятию "GitLab" - Новоселов Степан
+# Домашнее задание к занятию "Система мониторинга Zabbix" - Новоселов Степан
 
 
 ### Инструкция по выполнению домашнего задания
@@ -22,28 +22,74 @@
 
 ### Задание 1
 
-![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8%20%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D0%B0.png)
+1. [Скриншот авторизации в админке]()
+
+Установка и настройка Zabbix для Debian 11 (Bullseye)
+
+Установка PostgreSQL
+
+'apt install postgresq'
+
+Установка Zabbix репозитория
+
+'''
+wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
+dpkg -i zabbix-release_6.0-4+debian11_all.deb
+apt update
+'''
+
+Установка Zabbix server, frontend, agent
+
+'apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent'
+
+Создание пользователя БД
+
+'sudo -u postgres createuser --pwprompt zabbix'
+
+Создание БД
+
+'sudo -u postgres createdb -O zabbix zabbix'
+
+Импортирование схемы и данных на сервер Zabbix
+
+'zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix'
+
+Редактирование файла конфигурации БД сервера Zabbix
+
+'sudo nano /etc/zabbix/zabbix_server.conf'
+
+Настройка PHP для Zabbix веб-интерфейса
+
+'sudo nano /etc/httpd/conf.d/zabbix.conf'
+
+Запуск Zabbix server, Zabbix agent и веб-сервер
+
+'''
+sudo systemctl restart zabbix-server apache2 # zabbix-agent 
+sudo systemctl enable zabbix-server apache2 # zabbix-agent
+'''
 
 ### Задание 2
 
-```
-stages:
-  - test
-  - build
+![Скриншот раздела Configuration > Hosts]()
+![Скриншот лога zabbix agent]()
+![Скриншот раздела Monitoring]()
 
-test:
-  stage: test
-  image: golang:1.17
-  script:
-   - go test .
+Установка Zabbix agent
 
-build:
-  stage: build
-  image: docker:latest
-  script:
-   - docker build .
-```
+'apt install zabbix-agent'
 
-![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Bild%20Pipelines.png)
+Настройка файла конфигурации zabbix agent
 
+'sudo nano /etc/zabbix/zabbix_agentd.conf'
 
+Запуск Zabbix agent
+
+'''
+sudo systemctl restart zabbix-agent
+sudo systemctl enable zabbix-agent
+'''
+
+Просмотров лога zabbix agent
+
+'cat /var/zabbix/zabbix_agentd.log'
