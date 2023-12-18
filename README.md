@@ -22,74 +22,12 @@
 
 ### Задание 1
 
-![Скриншот авторизации в админке](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Admin_dashboard.png)
+![Скриншот страницы шаблона](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Admin_dashboard.png)
 
-Установка и настройка Zabbix для Debian 11 (Bullseye)
+### Задания 2 и 3
 
-Установка PostgreSQL
+![Скриншот страницы хостов с привязками шаблонов](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Configuratoin_hosts.png)
 
-`apt install postgresq`
+### Задание 4
 
-Установка Zabbix репозитория
-
-```
-wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
-dpkg -i zabbix-release_6.0-4+debian11_all.deb
-apt update
-```
-
-Установка Zabbix server, frontend, agent
-
-`apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent`
-
-Создание пользователя БД
-
-`sudo -u postgres createuser --pwprompt zabbix`
-
-Создание БД
-
-`sudo -u postgres createdb -O zabbix zabbix`
-
-Импортирование схемы и данных на сервер Zabbix
-
-`zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix`
-
-Редактирование файла конфигурации БД сервера Zabbix
-
-`sudo nano /etc/zabbix/zabbix_server.conf`
-
-Настройка PHP для Zabbix веб-интерфейса
-
-`sudo nano /etc/httpd/conf.d/zabbix.conf`
-
-Запуск Zabbix server, Zabbix agent и веб-сервер
-
-```
-sudo systemctl restart zabbix-server apache2 # zabbix-agent 
-sudo systemctl enable zabbix-server apache2 # zabbix-agent
-```
-
-### Задание 2
-
-![Скриншот раздела Configuration > Hosts](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Configuratoin_hosts.png)
-![Скриншот лога zabbix agent](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/zabbix_agent_log.png)
-![Скриншот раздела Monitoring](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Latest_data.png)
-
-Установка Zabbix agent
-
-`apt install zabbix-agent`
-
-Настройка файла конфигурации zabbix agent
-
-`sudo nano /etc/zabbix/zabbix_agentd.conf`
-
-Запуск Zabbix agent
-
-```
-sudo systemctl restart zabbix-agent
-sudo systemctl enable zabbix-agent
-```
-
-Просмотров лога zabbix agent
-
-`cat /var/zabbix/zabbix_agentd.log`
+![Скриншот dashboard с названием задание 4]()
