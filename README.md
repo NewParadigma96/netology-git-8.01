@@ -22,12 +22,12 @@
 
 ### Задание 1
 
-![Скриншот страницы шаблона](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Admin_dashboard.png)
+![Скриншот страницы шаблона](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Task_1.png)
 
 ### Задания 2 и 3
 
-![Скриншот страницы хостов с привязками шаблонов](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Configuratoin_hosts.png)
+![Скриншот страницы хостов с привязками шаблонов](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Task_2%20and%203.png)
 
 ### Задание 4
 
-![Скриншот dashboard с названием задание 4]()
+![Скриншот dashboard с названием задание 4](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Task_4.png)
