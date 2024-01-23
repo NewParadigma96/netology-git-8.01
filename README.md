@@ -23,8 +23,10 @@
 ### Задание 1
 
 ![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Castomization%20R1.png)
+
 ![Скриншот 2 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Castomization%20R2.png)
 
+![Файл PKT](https://github.com/NewParadigma96/netology-git-8.02/blob/main/files/hsrp_advanced%20novoselov.pkt)
 ### Задание 2
 
 Bash-скрипт
