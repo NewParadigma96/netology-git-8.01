@@ -22,8 +22,8 @@
 
 ### Задание 1
 
-![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8%20%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D0%B0.png)
-![Скриншот 2 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9>
+![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Castomization%20R1.png)
+![Скриншот 2 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Castomization%20R2.png)
 
 ### Задание 2
 
@@ -69,6 +69,5 @@ vrrp_instance VI_1 {
 }
 ```
 
-![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Bild%20Pipelines.png)
-![Скриншот 2 к заданию 2](https://github.com/NewParadigma96/netology-git-8.
-123
+![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/port%20refused.png)
+![Скриншот 2 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/the%20file%20is%20missing.png)
