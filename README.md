@@ -1,4 +1,4 @@
-# Домашнее задание к занятию "Система мониторинга Zabbix" - Новоселов Степан
+# Домашнее задание к занятию "GitLab" - Новоселов Степан
 
 
 ### Инструкция по выполнению домашнего задания
@@ -22,12 +22,53 @@
 
 ### Задание 1
 
-![Скриншот страницы шаблона](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Task_1.png)
+![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8%20%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D0%B0.png)
+![Скриншот 2 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9>
 
-### Задания 2 и 3
+### Задание 2
 
-![Скриншот страницы хостов с привязками шаблонов](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Task_2%20and%203.png)
+Bash-скрипт
+```
+FILE=`test -f /var/www/html/index.nginx-debian.html && echo $?`
+PORT=`bash -c "</dev/tcp/localhost/80" && echo $?`
 
-### Задание 4
+if [ $PORT -eq 0 ] && [ $FILE -eq 0 ]; then
+	exit 0
+else
+	exit 1
+fi
+```
 
-![Скриншот dashboard с названием задание 4](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Task_4.png)
+Keepalived.conf
+```
+global_defs {
+	script_user root
+	enable_script_security
+}
+
+vrrp_script check_g {
+	script "/usr/bin/bash.sh
+	interval 3
+	user root
+}
+
+vrrp_instance VI_1 {
+	state MASTER
+	interface enp0s8
+	virtual_router_id 51
+	priority 255
+	advert_int 1
+
+	virtual_ipaddress {
+		192.168.1.15/24
+	}
+
+	track_script {
+		check_g
+	}
+}
+```
+
+![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Bild%20Pipelines.png)
+![Скриншот 2 к заданию 2](https://github.com/NewParadigma96/netology-git-8.
+123
