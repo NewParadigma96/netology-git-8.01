@@ -22,54 +22,140 @@
 
 ### Задание 1
 
-![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Castomization%20R1.png)
+haproxy.cfg
+```
+global
+        log /dev/log    local0
+        log /dev/log    local1 notice
+        chroot /var/lib/haproxy
+        stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd lis>
+        stats timeout 30s
+        user haproxy
+        group haproxy
+        daemon
 
-![Скриншот 2 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Castomization%20R2.png)
+        # Default SSL material locations
+        ca-base /etc/ssl/certs
+        crt-base /etc/ssl/private
 
-![Файл PKT](https://github.com/NewParadigma96/netology-git-8.02/blob/main/files/hsrp_advanced%20novoselov.pkt)
+        # See: https://ssl-config.mozilla.org/#server=haproxy&server-version=2.>
+        ssl-default-bind-ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128>
+        ssl-default-bind-ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SH>
+        ssl-default-bind-options ssl-min-ver TLSv1.2 no-tls-tickets
+
+defaults
+log     global
+        mode    http
+        option  httplog
+        option  dontlognull
+        timeout connect 5000
+        timeout client  50000
+        timeout server  50000
+        errorfile 400 /etc/haproxy/errors/400.http
+        errorfile 403 /etc/haproxy/errors/403.http
+        errorfile 408 /etc/haproxy/errors/408.http
+        errorfile 500 /etc/haproxy/errors/500.http
+        errorfile 502 /etc/haproxy/errors/502.http
+        errorfile 503 /etc/haproxy/errors/503.http
+        errorfile 504 /etc/haproxy/errors/504.http
+
+listen stats  # веб-страница со статистикой
+        bind                    :888
+        mode                    http
+        stats                   enable
+        stats uri               /stats
+stats refresh           5s
+        stats realm             Haproxy\ Statistics
+
+frontend example # the frontend section
+        mode http
+        bind :8088
+        default_backend web_server
+
+backend web_server # the backend section
+        mode http
+        balance roundrobin
+        option httpchk
+        http-check send meth GET uri /index.html
+        server s1 127.0.0.1:8888 check
+        server s2 127.0.0.1:9999 check
+
+listen web_tcp
+
+        bind :1325
+
+        server s1 127.0.0.1:8888 check inter 3s
+        server s2 127.0.0.1:9999 check inter 3s
+```
+
+![Конфигурационный файл haproxy]()
+
+![Скриншот 1 к заданию 1]()
+
 ### Задание 2
 
-Bash-скрипт
+haproxy.cfg
 ```
-FILE=`test -f /var/www/html/index.nginx-debian.html && echo $?`
-PORT=`bash -c "</dev/tcp/localhost/80" && echo $?`
+global
+        log /dev/log    local0
+        log /dev/log    local1 notice
+        chroot /var/lib/haproxy
+        stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd lis>
+        stats timeout 30s
+        user haproxy
+        group haproxy
+        daemon
 
-if [ $PORT -eq 0 ] && [ $FILE -eq 0 ]; then
-	exit 0
-else
-	exit 1
-fi
+        # Default SSL material locations
+        ca-base /etc/ssl/certs
+        crt-base /etc/ssl/private
+
+        # See: https://ssl-config.mozilla.org/#server=haproxy&server-version=2.>
+        ssl-default-bind-ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128>
+        ssl-default-bind-ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SH>
+        ssl-default-bind-options ssl-min-ver TLSv1.2 no-tls-tickets
+
+defaults
+        log     global
+        mode    http
+        option  httplog
+        option  dontlognull
+        timeout connect 5000
+        timeout client  50000
+        timeout server  50000
+        errorfile 400 /etc/haproxy/errors/400.http
+        errorfile 403 /etc/haproxy/errors/403.http
+errorfile 408 /etc/haproxy/errors/408.http
+        errorfile 500 /etc/haproxy/errors/500.http
+        errorfile 502 /etc/haproxy/errors/502.http
+        errorfile 503 /etc/haproxy/errors/503.http
+        errorfile 504 /etc/haproxy/errors/504.http
+
+listen stats  # веб-страница со статистикой
+        bind                    :888
+        mode                    http
+        stats                   enable
+        stats uri               /stats
+        stats refresh           5s
+        stats realm             Haproxy\ Statistics
+
+frontend example # the frontend section
+        mode http
+        bind :8088
+        #default_backend web_servers
+        acl ACL_example.com hdr(host) -i example.com
+        use_backend web_servers if ACL_example.com
+
+backend web_servers # the backend section
+        mode http
+        balance roundrobin
+        option httpchk
+        http-check send meth GET uri /index.html
+        server s1 127.0.0.1:8888 weight 2 check
+        server s2 127.0.0.1:9999 weight 3 check
+        server s3 127.0.0.1:7777 weight 4 check
 ```
 
-Keepalived.conf
-```
-global_defs {
-	script_user root
-	enable_script_security
-}
+![Конфигурационный файл haproxy]()
 
-vrrp_script check_g {
-	script "/usr/bin/bash.sh
-	interval 3
-	user root
-}
-
-vrrp_instance VI_1 {
-	state MASTER
-	interface enp0s8
-	virtual_router_id 51
-	priority 255
-	advert_int 1
-
-	virtual_ipaddress {
-		192.168.1.15/24
-	}
-
-	track_script {
-		check_g
-	}
-}
-```
-
-![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/port%20refused.png)
-![Скриншот 2 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/the%20file%20is%20missing.png)
+![Скриншот 1 к заданию 2]()
