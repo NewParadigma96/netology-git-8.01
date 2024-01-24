@@ -88,9 +88,9 @@ listen web_tcp
         server s2 127.0.0.1:9999 check inter 3s
 ```
 
-![Конфигурационный файл haproxy]()
+![Конфигурационный файл haproxy](https://github.com/NewParadigma96/netology-git-8.02/blob/main/files/haproxy1.cfg)
 
-![Скриншот 1 к заданию 1]()
+![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Screenshot%20from%202024-01-24%2015-21-07.png)
 
 ### Задание 2
 
@@ -156,6 +156,6 @@ backend web_servers # the backend section
         server s3 127.0.0.1:7777 weight 4 check
 ```
 
-![Конфигурационный файл haproxy]()
+![Конфигурационный файл haproxy](https://github.com/NewParadigma96/netology-git-8.02/blob/main/files/haproxy2.cfg)
 
-![Скриншот 1 к заданию 2]()
+![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Screenshot%20from%202024-01-24%2016-04-22.png)
