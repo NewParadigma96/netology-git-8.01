@@ -1,4 +1,4 @@
-# Домашнее задание к занятию "Резервное копирование" - Новоселов Степан
+# Домашнее задание к занятию "Базы данных, их типы" - Новоселов Степан
 
 
 ### Инструкция по выполнению домашнего задания
@@ -22,36 +22,28 @@
 
 ### Задание 1
  
-![Скриншот 1 к заданию 1](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Screenshot%20from%202024-01-25%2012-17-09.png)
+1.1 NoSQL Column-Oriented т.к. плюсом таких СУБД является высокая скорость работы с большими объёмами данных и сложными запросами
+1.2 Реляционную СУБД класса "СА", что обеспечит согласованность данных и доступность
+1.3 NoSQL документо-орентированную СУБД 
+1.4 NoSQL графовую СУБД, что обеспечит быстрый поиск маршрутов доставки
 
 ### Задание 2
 
-crontab
-```
-# Edit this file to introduce tasks to be run by cron.
-# 
-# Each task to run has to be defined through a single line
-# indicating with different fields when the task will be run
-# and what command to run for the task
-# 
-# To define the time you can provide concrete values for
-# minute (m), hour (h), day of month (dom), month (mon),
-# and day of week (dow) or use '*' in these fields (for 'any').
-# 
-# Notice that tasks will be started based on the cron's system
-# daemon's notion of time and timezones.
-# 
-# Output of the crontab jobs (including errors) is sent through
-# email to the user the crontab file belongs to (unless redirected).
-# 
-# For example, you can run a backup of all your user accounts
-# at 5 a.m every week with:
-# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
-# 
-# For more information see the manual pages of crontab(5) and cron(8)
-# 
-# m h  dom mon dow   command
-@daily /etc/cron.daily/backup.sh
-```
+2.1 Открытие транзакции. Открытие соединения с БД банка после авторизации;
+2.2 Обращение к счету, проврка наличия необходимых средств и их блокировка;
+2.3 Проверка существования лицевого счета мобильного номера у оператора;
+2.4 Списание средств с банковского счета и зачисление их на лицевой счет мобильного номера;
+2.5 Отправка подтверждения об успешном зачислении средств на лицевой счет мобильного номера и получение обратного подтверждения;
+2.6 Коммит изменений. Закрытие транзакции.
 
-![Скриншот 1 к заданию 2](https://github.com/NewParadigma96/netology-git-8.02/blob/main/img/Screenshot%20from%202024-01-25%2013-18-11.png)
+### Задание 3
+
+3.1 SQL БД имеют высокую производительнсть при работе с сильно структурированными данными и большими объемами информации;
+3.2 SQL БД имеют более развитое индексирование, чем NoSQL БД; 
+3.3 SQL БД имеют лучшую поддержку транзакционности и следуют требованиям ACID;
+3.4 SQL БД имеет мощный язык запросов, который позволяет обрабатывать сложные запросы;
+3.5 Кэширование в SQL-базах данных позволяет улучшить производительность и более точно отслеживать изменения.
+
+### Задание 4
+
+На основе сложности запросов и поддержки транзакции. Если важна согласованность и запросы к СУБД простые, то реляционную СУБД. Если запросы к СУБД сложные и важно быстродействие, то колоночные СУБД.
